@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CDataStruct"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CDataStruct">
+				<Option output="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/CDataStruct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 CDataStruct"/>
+					<CompileFile command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CDataStruct/fast">
+				<Option output="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/CDataStruct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 CDataStruct/fast"/>
+					<CompileFile command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Thread/Desktop/TempCode/CDataStruct/list/list.c">
+			<Option target="CDataStruct"/>
+		</Unit>
+		<Unit filename="C:/Users/Thread/Desktop/TempCode/CDataStruct/list/list.h">
+			<Option target="CDataStruct"/>
+		</Unit>
+		<Unit filename="C:/Users/Thread/Desktop/TempCode/CDataStruct/main.c">
+			<Option target="CDataStruct"/>
+		</Unit>
+		<Unit filename="C:/Users/Thread/Desktop/TempCode/CDataStruct/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

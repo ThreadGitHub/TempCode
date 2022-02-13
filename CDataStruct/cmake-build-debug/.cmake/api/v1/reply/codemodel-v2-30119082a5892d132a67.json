@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Thread/Desktop/CDataStruct/cmake-build-debug",
-		"source" : "C:/Users/Thread/Desktop/CDataStruct"
+		"build" : "C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug",
+		"source" : "C:/Users/Thread/Desktop/TempCode/CDataStruct"
 	},
 	"version" : 
 	{

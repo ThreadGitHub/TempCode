@@ -7,6 +7,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/CMakeMinGWFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake"
 		},
 		{
@@ -290,6 +295,21 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "D:/SoftwareFiles/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -424,8 +444,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/Thread/Desktop/CDataStruct/cmake-build-debug",
-		"source" : "C:/Users/Thread/Desktop/CDataStruct"
+		"build" : "C:/Users/Thread/Desktop/TempCode/CDataStruct/cmake-build-debug",
+		"source" : "C:/Users/Thread/Desktop/TempCode/CDataStruct"
 	},
 	"version" : 
 	{
