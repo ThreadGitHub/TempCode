@@ -2,5 +2,5 @@
 #include "list\list.h"
 
 int main(){
-    test();
+    testList();
 }

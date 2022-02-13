@@ -9,7 +9,7 @@ Status getElem(struct List list, int i, ElemType *e){
     return OK;
 }
 
-void test() {
+void testList() {
     int num = 0;
     ElemType *el = &num;
     struct List list;

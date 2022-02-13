@@ -18,7 +18,7 @@ struct List {
     int length;
 };
 
-void test();
+void testList();
 
 /**
  * 获取线性表中指定元素的值
