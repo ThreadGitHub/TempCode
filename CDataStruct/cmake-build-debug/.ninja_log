@@ -1,0 +1,8 @@
+# ninja log v5
+1	94	6663711421870768	CMakeFiles/CDataStruct.dir/main.c.obj	bc4550c03893a7cb
+100	191	6663711422798668	CDataStruct.exe	5be34b3e8ef257bf
+0	133	6664657769131687	build.ninja	8e01c6404cf39b7e
+7	100	6663711421930871	CMakeFiles/CDataStruct.dir/list/list.c.obj	e4f5fcbb3fdaf209
+2	87	6664675056884793	CMakeFiles/CDataStruct.dir/main.c.obj	a15bb7b51420c3b8
+8	96	6664675056884793	CMakeFiles/CDataStruct.dir/list/list.c.obj	d680d875c0c6c81b
+97	185	6664675057709364	CDataStruct.exe	5be34b3e8ef257bf

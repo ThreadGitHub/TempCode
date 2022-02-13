@@ -1,0 +1,32 @@
+//
+// Created by Thread on 2022/2/12.
+//
+
+#ifndef CDATASTRUCT_LIST_H
+#define CDATASTRUCT_LIST_H
+
+#define maxLength 10
+#define OK 1
+#define Error 0
+#define True 1
+#define False 0
+typedef int ElemType;
+typedef int Status;
+
+struct List {
+    ElemType data[maxLength];
+    int length;
+};
+
+void test();
+
+/**
+ * 获取线性表中指定元素的值
+ * @param list 线性表
+ * @param i 获取元素的索引
+ * @param e 元素的返回值
+ * @return
+ */
+Status getElem(struct List list, int i, ElemType *e);
+
+#endif //CDATASTRUCT_LIST_H
