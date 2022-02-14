@@ -13,10 +13,10 @@
 typedef int ElemType;
 typedef int Status;
 
-struct List {
+typedef struct List {
     ElemType data[maxLength];
     int length;
-};
+} List;
 
 void testList();
 
@@ -27,6 +27,8 @@ void testList();
  * @param e 元素的返回值
  * @return
  */
-Status getElem(struct List list, int i, ElemType *e);
+Status getElem(List list, int i, ElemType *e);
+
+Status ListInsert(List *list, int i, ElemType e);
 
 #endif //CDATASTRUCT_LIST_H

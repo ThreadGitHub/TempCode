@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\cmake\win\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Thread\Desktop\TempCode\CDataStruct
+CMAKE_SOURCE_DIR = D:\TempCode\CDataStruct
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug
+CMAKE_BINARY_DIR = D:\TempCode\CDataStruct\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CDataStruct.dir/depend.make
@@ -71,30 +71,30 @@ include CMakeFiles/CDataStruct.dir/flags.make
 CMakeFiles/CDataStruct.dir/main.c.obj: CMakeFiles/CDataStruct.dir/flags.make
 CMakeFiles/CDataStruct.dir/main.c.obj: ../main.c
 CMakeFiles/CDataStruct.dir/main.c.obj: CMakeFiles/CDataStruct.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CDataStruct.dir/main.c.obj"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CDataStruct.dir/main.c.obj -MF CMakeFiles\CDataStruct.dir\main.c.obj.d -o CMakeFiles\CDataStruct.dir\main.c.obj -c C:\Users\Thread\Desktop\TempCode\CDataStruct\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CDataStruct.dir/main.c.obj"
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CDataStruct.dir/main.c.obj -MF CMakeFiles\CDataStruct.dir\main.c.obj.d -o CMakeFiles\CDataStruct.dir\main.c.obj -c D:\TempCode\CDataStruct\main.c
 
 CMakeFiles/CDataStruct.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CDataStruct.dir/main.c.i"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Thread\Desktop\TempCode\CDataStruct\main.c > CMakeFiles\CDataStruct.dir\main.c.i
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\TempCode\CDataStruct\main.c > CMakeFiles\CDataStruct.dir\main.c.i
 
 CMakeFiles/CDataStruct.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CDataStruct.dir/main.c.s"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Thread\Desktop\TempCode\CDataStruct\main.c -o CMakeFiles\CDataStruct.dir\main.c.s
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\TempCode\CDataStruct\main.c -o CMakeFiles\CDataStruct.dir\main.c.s
 
 CMakeFiles/CDataStruct.dir/list/list.c.obj: CMakeFiles/CDataStruct.dir/flags.make
 CMakeFiles/CDataStruct.dir/list/list.c.obj: ../list/list.c
 CMakeFiles/CDataStruct.dir/list/list.c.obj: CMakeFiles/CDataStruct.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CDataStruct.dir/list/list.c.obj"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CDataStruct.dir/list/list.c.obj -MF CMakeFiles\CDataStruct.dir\list\list.c.obj.d -o CMakeFiles\CDataStruct.dir\list\list.c.obj -c C:\Users\Thread\Desktop\TempCode\CDataStruct\list\list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CDataStruct.dir/list/list.c.obj"
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CDataStruct.dir/list/list.c.obj -MF CMakeFiles\CDataStruct.dir\list\list.c.obj.d -o CMakeFiles\CDataStruct.dir\list\list.c.obj -c D:\TempCode\CDataStruct\list\list.c
 
 CMakeFiles/CDataStruct.dir/list/list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CDataStruct.dir/list/list.c.i"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Thread\Desktop\TempCode\CDataStruct\list\list.c > CMakeFiles\CDataStruct.dir\list\list.c.i
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\TempCode\CDataStruct\list\list.c > CMakeFiles\CDataStruct.dir\list\list.c.i
 
 CMakeFiles/CDataStruct.dir/list/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CDataStruct.dir/list/list.c.s"
-	D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Thread\Desktop\TempCode\CDataStruct\list\list.c -o CMakeFiles\CDataStruct.dir\list\list.c.s
+	D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\TempCode\CDataStruct\list\list.c -o CMakeFiles\CDataStruct.dir\list\list.c.s
 
 # Object files for target CDataStruct
 CDataStruct_OBJECTS = \
@@ -110,7 +110,7 @@ CDataStruct.exe: CMakeFiles/CDataStruct.dir/build.make
 CDataStruct.exe: CMakeFiles/CDataStruct.dir/linklibs.rsp
 CDataStruct.exe: CMakeFiles/CDataStruct.dir/objects1.rsp
 CDataStruct.exe: CMakeFiles/CDataStruct.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CDataStruct.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CDataStruct.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CDataStruct.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +122,6 @@ CMakeFiles/CDataStruct.dir/clean:
 .PHONY : CMakeFiles/CDataStruct.dir/clean
 
 CMakeFiles/CDataStruct.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Thread\Desktop\TempCode\CDataStruct C:\Users\Thread\Desktop\TempCode\CDataStruct C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles\CDataStruct.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\TempCode\CDataStruct D:\TempCode\CDataStruct D:\TempCode\CDataStruct\cmake-build-debug D:\TempCode\CDataStruct\cmake-build-debug D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles\CDataStruct.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CDataStruct.dir/depend
 

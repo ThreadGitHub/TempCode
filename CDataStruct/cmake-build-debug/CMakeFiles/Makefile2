@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\SoftwareFiles\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.46\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\cmake\win\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Thread\Desktop\TempCode\CDataStruct
+CMAKE_SOURCE_DIR = D:\TempCode\CDataStruct
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug
+CMAKE_BINARY_DIR = D:\TempCode\CDataStruct\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/CDataStruct.dir/clean
 CMakeFiles/CDataStruct.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CDataStruct.dir\build.make CMakeFiles/CDataStruct.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CDataStruct.dir\build.make CMakeFiles/CDataStruct.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target CDataStruct"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target CDataStruct"
 .PHONY : CMakeFiles/CDataStruct.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CDataStruct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/CDataStruct.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Thread\Desktop\TempCode\CDataStruct\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\TempCode\CDataStruct\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/CDataStruct.dir/rule
 
 # Convenience name for target.
