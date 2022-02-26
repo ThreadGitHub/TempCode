@@ -31,18 +31,18 @@ Status getElem(List list, int i, ElemType *e);
 
 /**
  * 线性表 插入操作
- * @param list
- * @param i
- * @param e
+ * @param list 线性表
+ * @param i 插入元素的位置
+ * @param e 接收值
  * @return
  */
 Status ListInsert(List *list, int i, ElemType e);
 
 /**
  * 线性表 删除操作
- * @param list
- * @param i
- * @param e
+ * @param list 线性表
+ * @param i 删除元素位置
+ * @param e 接收值
  * @return
  */
 Status ListDelete(List *list, int i, ElemType *e);
