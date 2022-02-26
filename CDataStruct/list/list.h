@@ -38,4 +38,12 @@ Status getElem(List list, int i, ElemType *e);
  */
 Status ListInsert(List *list, int i, ElemType e);
 
+/**
+ * 线性表 删除操作
+ * @param list
+ * @param i
+ * @param e
+ * @return
+ */
+Status ListDelete(List *list, int i, ElemType *e);
 #endif //CDATASTRUCT_LIST_H

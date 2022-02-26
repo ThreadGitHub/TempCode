@@ -26,6 +26,25 @@ Status ListInsert(List *list, int i, ElemType e){
     return OK;
 }
 
+Status ListDelete(List *list, int i, ElemType *e){
+
+    if(i == 0){
+        return Error;
+    }
+    if(i < 0 || i > list->length){
+        return Error;
+    }
+    i -= 1;
+    *e = list->data[i];
+    if(i != list->length){
+        for(int num = i+1;num < sizeof (list->data) / sizeof (list->data[0]);num++){
+            list->data[num-1] = list->data[num];
+        }
+    }
+    list->length--;
+    return OK;
+}
+
 void testList() {
     int num = 0;
     ElemType *el = &num;
@@ -58,4 +77,9 @@ void testList() {
     printf("\n第2个元素 : %d", *elemType_p);
     getElem(list, 10, elemType_p);
     printf("\n第10个元素 : %d", *elemType_p);
+
+    //删除第一个元素
+    ListDelete(listPoint, 1,elemType_p);
+    //删除第三个元素
+    ListDelete(listPoint, 3,elemType_p);
 }
