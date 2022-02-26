@@ -29,6 +29,13 @@ void testList();
  */
 Status getElem(List list, int i, ElemType *e);
 
+/**
+ * 线性表 插入操作
+ * @param list
+ * @param i
+ * @param e
+ * @return
+ */
 Status ListInsert(List *list, int i, ElemType e);
 
 #endif //CDATASTRUCT_LIST_H
