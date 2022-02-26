@@ -1,3 +1,0 @@
-D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\CDataStruct.dir/objects.a
-D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\ar.exe qc CMakeFiles\CDataStruct.dir/objects.a @CMakeFiles\CDataStruct.dir\objects1.rsp
-D:\JetBrains\Toolbox\apps\CLion\ch-0\213.6461.75\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\CDataStruct.dir/objects.a -Wl,--no-whole-archive -o CDataStruct.exe -Wl,--out-implib,libCDataStruct.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CDataStruct.dir\linklibs.rsp
