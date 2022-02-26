@@ -27,7 +27,6 @@ Status ListInsert(List *list, int i, ElemType e){
 }
 
 Status ListDelete(List *list, int i, ElemType *e){
-
     if(i == 0){
         return Error;
     }
