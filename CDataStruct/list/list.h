@@ -18,8 +18,6 @@ typedef struct List {
     int length;
 } List;
 
-void testList();
-
 /**
  * 获取线性表中指定元素的值
  * @param list 线性表
@@ -46,4 +44,9 @@ Status ListInsert(List *list, int i, ElemType e);
  * @return
  */
 Status ListDelete(List *list, int i, ElemType *e);
+
+/**
+ * 测试函数
+ */
+void testList();
 #endif //CDATASTRUCT_LIST_H
