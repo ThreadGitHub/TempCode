@@ -13,7 +13,8 @@ Status ListInsert(List *list, int i, ElemType e){
     if(list->length == maxLength){
         return Error;
     }
-    if(i < 1 || i > maxLength){
+    //这里是可以允许的范围是 1 - 目前所在数量 +1  这个+1就是允许在队尾追加
+    if(i < 1 || i > list->length + 1){
         return Error;
     }
     if(i <= list->length){
