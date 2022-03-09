@@ -3,4 +3,4 @@ project(CDataStruct C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CDataStruct main.c list/list.c list/list.h)
+add_executable(CDataStruct main.c list/LinkList.h list/LinkList.c)
