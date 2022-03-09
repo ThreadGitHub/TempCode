@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include "list.h"
 
+Status initList(List *list){
+    list->length = 0;
+    int length = sizeof(list->data) / sizeof(list->data[0]);
+    for(int i = 0;i < length;i++){
+        list->data[i] = 0;
+    }
+}
+
 Status getElem(List list, int i, ElemType *e){
     if(list.length == 0 || i < 1 || i > list.length){
         return Error;
@@ -48,14 +56,14 @@ Status ListDelete(List *list, int i, ElemType *e){
 void testList() {
     int num = 0;
     ElemType *el = &num;
-    List list;
-    list.length = 0;
-    int length = sizeof(list.data) / sizeof(list.data[0]);
-    for(int i = 0;i < length;i++){
-        list.data[i] = 0;
-    }
 
+    List list;
     List *listPoint = &list;
+
+    //初始化
+    initList(listPoint);
+
+    //插入数据
     ListInsert(listPoint, 1, 1);
     ListInsert(listPoint, 2, 2);
     ListInsert(listPoint, 3, 3);
@@ -64,17 +72,18 @@ void testList() {
     ListInsert(listPoint, 10, 777);
     Status  result = ListInsert(listPoint, 11, 777);
 
-    printf("顺序表 : ");
-    for (int i = 0; i < length; ++i){
-        printf("%d\t", list.data[i]);
-    }
-
     ElemType elemType = 0;
     ElemType *elemType_p = &elemType;
+
+    *elemType_p = 0;
     getElem(list, 4, elemType_p);
-    printf("\n第4个元素 : %d", *elemType_p);
+    printf("第4个元素 : %d", *elemType_p);
+
+    *elemType_p = 0;
     getElem(list, 2, elemType_p);
     printf("\n第2个元素 : %d", *elemType_p);
+
+    *elemType_p = 0;
     getElem(list, 10, elemType_p);
     printf("\n第10个元素 : %d", *elemType_p);
 
@@ -82,4 +91,9 @@ void testList() {
     ListDelete(listPoint, 1,elemType_p);
     //删除第三个元素
     ListDelete(listPoint, 3,elemType_p);
+
+    printf("\n顺序表 : ");
+    for (int i = 0; i < list.length; ++i){
+        printf("%d\t", list.data[i]);
+    }
 }

@@ -19,6 +19,13 @@ typedef struct List {
 } List;
 
 /**
+ * 初始化List
+ * @param list
+ * @return
+ */
+Status initList(List *list);
+
+/**
  * 获取线性表中指定元素的值
  * @param list 线性表
  * @param i 获取元素的索引
