@@ -81,6 +81,7 @@ Status CreateListHead(LinkList *list, int n){
 }
 
 void testList(){
+    //定义链表
     LinkList list;
 
     //根据头插法创建链表
