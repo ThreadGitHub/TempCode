@@ -52,5 +52,13 @@ Status ListDelete(LinkList *list, int i, ElemType *e);
  */
 Status CreateListHead(LinkList *list, int n);
 
+/**
+ * 创建链表整表 尾插法
+ * @param list
+ * @param n
+ * @return
+ */
+Status CreateListTail(LinkList *list, int n);
+
 void testList();
 #endif //CDATASTRUCT_LINKLIST_H

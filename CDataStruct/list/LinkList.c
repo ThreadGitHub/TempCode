@@ -81,12 +81,37 @@ Status CreateListHead(LinkList *list, int n){
     }
 }
 
+Status CreateListTail(LinkList *list, int n){
+    LinkList lastNode;
+    //创建头结点
+    *list = malloc(sizeof (Node));
+    lastNode = *list;
+    lastNode->data = 0;
+
+    //循环创建尾节点
+    for(int i = 0; i < n;i++){
+        //重置随机数种子
+        srand(time(NULL));
+        int randNum = rand() % 100 + 1;
+
+        //创建节点
+        Node* item = malloc(sizeof (Node));
+        (*item).data = randNum;
+        lastNode->next = item;
+        lastNode = item;
+    }
+    lastNode->next = NULL;
+}
+
 void testList(){
     //定义链表
     LinkList list;
 
     //根据头插法创建链表
-    CreateListHead(&list, 1);
+//    CreateListHead(&list, 1);
+
+    //根据尾插法创建链表
+    CreateListTail(&list, 10);
 
     //获取元素
     ElemType *item = (int*)malloc(sizeof (int));
@@ -99,4 +124,3 @@ void testList(){
     //删除元素
     ListDelete(&list, 1, item);
 }
-
