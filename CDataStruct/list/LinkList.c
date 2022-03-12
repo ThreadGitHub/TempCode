@@ -103,6 +103,17 @@ Status CreateListTail(LinkList *list, int n){
     lastNode->next = NULL;
 }
 
+Status ClearList(LinkList *list){
+    LinkList nextNode = (*list)->next;
+    while(nextNode){
+        LinkList node = nextNode->next;
+        nextNode = node->next;
+        free(node);
+    }
+    free((*list)->next);
+    *list = NULL;
+}
+
 void testList(){
     //定义链表
     LinkList list;
@@ -123,4 +134,7 @@ void testList(){
 
     //删除元素
     ListDelete(&list, 1, item);
+
+    //销毁链表
+    ClearList(&list);
 }

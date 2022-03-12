@@ -60,5 +60,12 @@ Status CreateListHead(LinkList *list, int n);
  */
 Status CreateListTail(LinkList *list, int n);
 
+/**
+ * 销毁链表
+ * @param list
+ * @return
+ */
+Status ClearList(LinkList *list);
+
 void testList();
 #endif //CDATASTRUCT_LINKLIST_H
