@@ -73,6 +73,7 @@ Status CreateListHead(LinkList *list, int n){
         //重置随机数种子
         srand(time(NULL));
         int randNum = rand() % 100 + 1;
+        //头结点的元素后面的第一个元素持续拼接新创建的节点 ，拆开 头结点和 之后的 节点 然后拼接上新创建的节点
         Node* item = malloc(sizeof (Node));
         (*item).data = randNum;
         (*item).next = (*list)->next;
