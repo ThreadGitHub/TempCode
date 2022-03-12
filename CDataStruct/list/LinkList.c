@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "LinkList.h"
+#include <time.h>
 
 Status getElem(LinkList list, int i, ElemType *e){
     //指向第一个节点
@@ -62,15 +63,30 @@ Status ListDelete(LinkList *list, int i, ElemType *e){
     return OK;
 }
 
+Status CreateListHead(LinkList *list, int n){
+    //创建 list的头节点
+    LinkList node = (LinkList)malloc(sizeof (Node));
+    (*node).data = 0;
+    (*node).next = NULL;
+    *list = node;
+    for(int i = 0;i < n;i++){
+        //重置随机数种子
+        srand(time(NULL));
+        int randNum = rand() % 100 + 1;
+        Node* item = malloc(sizeof (Node));
+        (*item).data = randNum;
+        (*item).next = (*list)->next;
+        (*list)->next = item;
+    }
+}
+
 void testList(){
     LinkList list;
-    Node node;
-    node.data = 2;
-    Node starNode;
-    starNode.data = 1;
-    starNode.next = &node;
-    list = &starNode;
 
+    //根据头插法创建链表
+    CreateListHead(&list, 1);
+
+    //获取元素
     ElemType *item = (int*)malloc(sizeof (int));
     getElem(list, 2, item);
     printf("%d", *item);
@@ -81,3 +97,4 @@ void testList(){
     //删除元素
     ListDelete(&list, 1, item);
 }
+

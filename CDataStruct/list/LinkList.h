@@ -44,5 +44,13 @@ Status ListInsert(LinkList *list, int i, ElemType e);
  */
 Status ListDelete(LinkList *list, int i, ElemType *e);
 
+/**
+ * 创建链表整表 头插法
+ * @param list
+ * @param n
+ * @return
+ */
+Status CreateListHead(LinkList *list, int n);
+
 void testList();
 #endif //CDATASTRUCT_LINKLIST_H
