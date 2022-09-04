@@ -52,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
         //认证失败获取错误信息
         if (Objects.isNull(authenticate)) {
             return ResponseResult.error(msg, null);
-        }else {
+        } else {
             LoginUser userDetails = (LoginUser) authenticate.getPrincipal();
             //将认证用户存入redis token时效30分钟
             redisTemplate.opsForValue().set(RedisKeys.loginUserKeyPrefix + userDetails.getUser().getId(), userDetails, 30, TimeUnit.MINUTES);

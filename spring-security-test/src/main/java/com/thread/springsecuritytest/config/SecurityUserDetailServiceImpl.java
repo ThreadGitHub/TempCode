@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -38,7 +39,6 @@ public class SecurityUserDetailServiceImpl implements UserDetailsService {
             throw new RuntimeException("用户不存在");
         }
         //封装成一个 UserDetails 对象
-        LoginUser loginUser = new LoginUser(user);
-        return loginUser;
+        return new LoginUser(user, Arrays.asList("test", "AAA"));
     }
 }

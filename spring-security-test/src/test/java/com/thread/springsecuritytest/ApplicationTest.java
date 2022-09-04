@@ -4,15 +4,14 @@ import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import com.thread.springsecuritytest.domain.User;
 import com.thread.springsecuritytest.service.UserService;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 public class ApplicationTest {
@@ -22,12 +21,22 @@ public class ApplicationTest {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Data
+    class TestUser{
+        /**
+         * 权限集合
+         */
+        private List<String> authorities = new ArrayList<>();
+    }
+
     @Test
     public void test() {
-        String encode = passwordEncoder.encode("1234");
-        System.out.println(encode);
-        List<User> users = userService.listByIds(Arrays.asList(1));
-        System.out.println(users);
+        TestUser test = new TestUser();
+        test.authorities.add("tesss");
+        redisTemplate.opsForValue().set("test",test);
     }
 
     public static void main(String[] args) {
