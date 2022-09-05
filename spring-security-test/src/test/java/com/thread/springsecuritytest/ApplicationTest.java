@@ -3,6 +3,7 @@ package com.thread.springsecuritytest;
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import com.thread.springsecuritytest.domain.User;
+import com.thread.springsecuritytest.mapper.UserMapper;
 import com.thread.springsecuritytest.service.UserService;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
@@ -17,12 +18,12 @@ import java.util.*;
 public class ApplicationTest {
     @Autowired
     private PasswordEncoder passwordEncoder;
-
     @Autowired
     private UserService userService;
-
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private UserMapper userMapper;
 
     @Data
     class TestUser{
@@ -34,9 +35,8 @@ public class ApplicationTest {
 
     @Test
     public void test() {
-        TestUser test = new TestUser();
-        test.authorities.add("tesss");
-        redisTemplate.opsForValue().set("test",test);
+        List<String> strings = userMapper.listAuthication("1");
+        System.out.println(strings);
     }
 
     public static void main(String[] args) {

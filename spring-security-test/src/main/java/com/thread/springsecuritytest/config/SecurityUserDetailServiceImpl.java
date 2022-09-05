@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -38,7 +39,9 @@ public class SecurityUserDetailServiceImpl implements UserDetailsService {
         if (Objects.isNull(user)) {
             throw new RuntimeException("用户不存在");
         }
+        //根据userid查询权限信息
+        List<String> authications = userService.listAuthication(String.valueOf(user.getId()));
         //封装成一个 UserDetails 对象
-        return new LoginUser(user, Arrays.asList("test", "AAA"));
+        return new LoginUser(user, authications);
     }
 }
