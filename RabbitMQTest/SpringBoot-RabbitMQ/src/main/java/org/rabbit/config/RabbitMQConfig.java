@@ -118,4 +118,35 @@ public class RabbitMQConfig {
     public Binding myDelayQueueBind() {
         return BindingBuilder.bind(myDelayQueue()).to(delayExchange()).with("my_delay_queue").noargs();
     }
+
+    /******** 测试备份交换机 ******/
+    @Bean
+    public DirectExchange testExchange() {
+        Map<String, Object> arguments = new HashMap<>();
+        // 设置该交换机的备份交换机为  alternate_exchange
+        arguments.put("alternate-exchange", "alternate_exchange");
+        return new DirectExchange("test_exchange", true, false, arguments);
+    }
+
+    /**
+     * 备份交换机
+     * @return
+     */
+    @Bean
+    public FanoutExchange alternateExchange() {
+        return new FanoutExchange("alternate_exchange", true, false);
+    }
+
+    /**
+     * 备份交换机的队列
+     * @return
+     */
+    @Bean
+    public Queue alternateTestQueue() {
+        return new Queue("alternate_test_queue", true, false, false);
+    }
+    @Bean
+    public Binding alternateTestBind() {
+        return BindingBuilder.bind(alternateTestQueue()).to(alternateExchange());
+    }
 }
