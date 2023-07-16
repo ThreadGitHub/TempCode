@@ -1,0 +1,16 @@
+server:
+  port: 999
+
+spring:
+  application:
+    name: hello-world
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbit
+    password: rabbit
+    virtual-host: /
+    # 发布确认模式
+    publisher-confirm-type: correlated
+    # 开启消息回退
+    publisher-returns: true
