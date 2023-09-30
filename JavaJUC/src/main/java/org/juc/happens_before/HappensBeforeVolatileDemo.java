@@ -1,6 +1,8 @@
 package org.juc.happens_before;
 
 /**
+ * 测试例子不正确
+ * ---------这个测试测试的 1.4和1.3 和 1.8都有这个问题不知道为什么---------
  * 对于 volatile规则 和 次序规则的示例
  * 这个示例对于 jdk1.5之前版本num的值是未知的 但1.5之后引入了happens-before原则所以是10
  * 根据次序原则 num=10 先行发生于 flag=trye 所以对于线程B他是可见的
@@ -9,14 +11,14 @@ package org.juc.happens_before;
  */
 public class HappensBeforeVolatileDemo {
     public static void main(String[] args) {
-        Resource resource = new Resource();
+        ResourceClass resource = new ResourceClass();
 
         new Thread(resource::write, "Thread-A").start();
         new Thread(resource::read, "Thread-B").start();
     }
 }
 
-class Resource {
+class ResourceClass {
     private int num = 0;
     private volatile boolean flag = false;
 
