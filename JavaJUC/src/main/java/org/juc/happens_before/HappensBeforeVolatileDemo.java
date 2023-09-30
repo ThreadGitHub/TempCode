@@ -2,6 +2,8 @@ package org.juc.happens_before;
 
 /**
  * 对于 volatile规则 和 次序规则的示例
+ * 这个示例对于 jdk1.5之前版本num的值是未知的 但1.5之后引入了happens-before原则所以是10
+ * 根据次序原则 num=10 先行发生于 flag=trye 所以对于线程B他是可见的
  * @author thread
  * @date 2023/9/30 19:12
  */
