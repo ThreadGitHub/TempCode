@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author thread
  * @date 2023/9/28 10:45
  */
-public class FairLockDemo {
+public class ReentrantLockDemo {
     /**
      * 定义Lock锁
      * new ReentrantLock() 非公平锁
@@ -45,7 +45,7 @@ public class FairLockDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        FairLockDemo fairLockDemo = new FairLockDemo();
+        ReentrantLockDemo fairLockDemo = new ReentrantLockDemo();
         CompletableFuture.runAsync(()-> {
             while (fairLockDemo.sale() > 0) {
                 System.out.println("Thread-A卖出一张票");

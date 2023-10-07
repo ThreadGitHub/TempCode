@@ -47,5 +47,7 @@ public class WeakReferenceDemo {
 
         System.gc();
         TimeUnit.SECONDS.sleep(1);
+
+        Thread.currentThread().join();
     }
 }
