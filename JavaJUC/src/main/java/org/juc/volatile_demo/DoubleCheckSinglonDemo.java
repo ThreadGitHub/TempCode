@@ -1,7 +1,9 @@
 package org.juc.volatile_demo;
 
+import java.util.Arrays;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 双检锁 单例模式
@@ -13,14 +15,19 @@ public class DoubleCheckSinglonDemo {
     private static volatile DoubleCheckSinglonDemo singlon;
 
     private String str;
+
+    private byte[] arr;
+
     private DoubleCheckSinglonDemo(){
-        this.str = "init str";
+        this.str = "测试测试测试测试测试";
+        this.arr = new byte[1024];
     }
 
     @Override
     public String toString() {
         return "DoubleCheckSinglonDemo{" +
                 "str='" + str + '\'' +
+                ", arr=" + Arrays.toString(arr) +
                 '}';
     }
 
@@ -36,7 +43,7 @@ public class DoubleCheckSinglonDemo {
         return singlon;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int threadNum = 10;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
         for (int i = 0; i < threadNum; i++) {

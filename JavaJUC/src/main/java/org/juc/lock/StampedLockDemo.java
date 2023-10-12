@@ -1,49 +1,47 @@
 package org.juc.lock;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.locks.StampedLock;
 
 /**
- * 可重入读写锁 ReentrantReadWriteLock 示例
+ * StampedLock示例 替换ReentrantReadWriteLock读写锁
  * @author thread
- * @date 2023/10/7 12:12
+ * @date 2023/10/10 17:37
  */
-public class ReentrantReadWriteLockDemo {
-    static ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
+public class StampedLockDemo {
+    private static StampedLock stampedLock = new StampedLock();
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            new Thread(ReentrantReadWriteLockDemo::write).start();
+            new Thread(StampedLockDemo::write, "t1").start();
         }
 
         for (int i = 0; i < 10; i++) {
-            new Thread(ReentrantReadWriteLockDemo::read).start();
+            new Thread(StampedLockDemo::read, "t2").start();
         }
     }
 
     public static void write() {
-        ReentrantReadWriteLock.WriteLock writeLock = reentrantReadWriteLock.writeLock();
-        writeLock.lock();
+        long stamp = stampedLock.writeLock();
         try {
             System.out.println("开始写入...");
             TimeUnit.MILLISECONDS.sleep(300);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-            writeLock.unlock();
+            stampedLock.unlockWrite(stamp);
         }
     }
 
     public static void read() {
-        ReentrantReadWriteLock.ReadLock readLock = reentrantReadWriteLock.readLock();
-        readLock.lock();
+        long stamp = stampedLock.readLock();
         try {
             System.out.println("开始读取...");
             TimeUnit.MILLISECONDS.sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-            readLock.unlock();
+            stampedLock.unlockRead(stamp);
         }
     }
 }
