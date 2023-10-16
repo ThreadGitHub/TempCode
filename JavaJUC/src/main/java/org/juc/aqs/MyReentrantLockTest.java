@@ -16,7 +16,7 @@ public class MyReentrantLockTest {
         reentrantLock.lock();
         try {
             num += 1;
-            System.out.println(Thread.currentThread().getName() + ": " + num);
+//            System.out.println(Thread.currentThread().getName() + ": " + num);
 //            TimeUnit.MILLISECONDS.sleep(10);
         } finally {
             reentrantLock.unlock();
@@ -27,7 +27,7 @@ public class MyReentrantLockTest {
         CountDownLatch countDownLatch = new CountDownLatch(6);
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();
@@ -35,7 +35,7 @@ public class MyReentrantLockTest {
 
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();
@@ -43,7 +43,7 @@ public class MyReentrantLockTest {
 
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();
@@ -51,7 +51,7 @@ public class MyReentrantLockTest {
 
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();
@@ -59,7 +59,7 @@ public class MyReentrantLockTest {
 
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();
@@ -67,7 +67,7 @@ public class MyReentrantLockTest {
 
         new Thread(()-> {
             int num = 0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 add();
             }
             countDownLatch.countDown();

@@ -152,14 +152,17 @@ public class MyReentrantLock {
                     // 尾节点移动
                     tail = node;
 
-                    // 如果头节点之后的next刚加完节点 锁就释放了就不应该去睡觉了
+                    // 入队以后 和 睡觉之前 这段时间 再尝试抢锁
+                    // node.prev == head
+                    // 这里为什么是第二个节点才能抢锁成功因为并发的过程可能会唤醒多个线程要保证按顺序抢锁不然会出现数据混乱
                     if (node.prev == head && tryAcquire()) {
                         // 自己节点变为新的头节点
                         node.thread = null;
                         node.prev = null;
-                        head = node;
                         // 设置当前线程为持有锁线程
                         this.ownerThread = Thread.currentThread();
+                        // 替换头节点
+                        head = node;
                         return;
                     }
                     break;
@@ -172,8 +175,6 @@ public class MyReentrantLock {
             // 醒了后循环抢锁
             for (;;) {
                 // 唤醒后再次抢锁
-                // node.prev == head
-                // 这里为什么是第二个节点才能抢锁成功因为并发的过程可能会唤醒多个线程要保证按顺序抢锁不然会出现数据混乱
                 if (node.prev == head && tryAcquire()) {
                     // 自己节点变为新的头节点
                     node.thread = null;
@@ -192,9 +193,10 @@ public class MyReentrantLock {
      * 解锁
      */
     public void unlock() {
-        System.out.println(Thread.currentThread() + " " + head);
+//        System.out.println(Thread.currentThread() + " " + head);
         // 如果减到0就解锁成功
         if (ownerThread == Thread.currentThread()) {
+            //解锁处理
             if ((state.get() -1) == 0) {
                 // 持有线程设为null
                 ownerThread = null;
@@ -204,12 +206,10 @@ public class MyReentrantLock {
                     // 唤醒线程
                     LockSupport.unpark(head.next.thread);
                 }
-
-                // 解锁 state-1 这里一定是最后再放锁 不然线程会从缝隙进来
-                state.decrementAndGet();
-            } else {
-                state.decrementAndGet();
             }
+
+            // 解锁 state-1 这里一定是最后再放锁 不然线程会从缝隙进来
+            state.decrementAndGet();
         }
     }
 }
