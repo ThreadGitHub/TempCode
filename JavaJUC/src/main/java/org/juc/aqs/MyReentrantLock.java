@@ -92,6 +92,7 @@ public class MyReentrantLock {
      */
     public boolean tryAcquire() {
         if (hasQueuedPredecessors() && state.compareAndSet(0, 1)) {
+//            System.out.println(Thread.currentThread().getName() + " lock");
             return true;
         }
         return false;
@@ -132,7 +133,7 @@ public class MyReentrantLock {
 
             // 抢占失败入队列
             while (true) {
-                // 尝试抢锁
+                // 入队之前尝试抢锁
                 if (tryAcquire()) {
                     // 设置当前线程为持有锁线程
                     this.ownerThread = Thread.currentThread();
@@ -164,6 +165,8 @@ public class MyReentrantLock {
                         // 替换头节点
                         head = node;
                         return;
+                    } else if (node.prev != head) {
+//                        System.out.println("肯定是head.next能抢到锁啊：" + Thread.currentThread().getName() + " " + head);
                     }
                     break;
                 }
@@ -171,10 +174,30 @@ public class MyReentrantLock {
 
             // 开始睡觉
             LockSupport.park(Thread.currentThread());
+            System.out.println("被唤醒：" + Thread.currentThread().getName() + " " + System.currentTimeMillis());
 
             // 醒了后循环抢锁
+            Node n;
             for (;;) {
                 // 唤醒后再次抢锁
+                // 这里 node.prev 的意义是只能队列第二个线程才能获取到锁
+                // 因为CPU执行太快了 并且是多核并行再加上重排序 这里会出现多个线程同时出现在这里的情况
+                // 错误日志： 唤醒 线程D 线程C 线程B 是在同一毫秒 被唤醒 所以如果不加判断 就会出现后面的线程抢到锁的情况
+                    //thread-F: 1
+                    //thread-A: 2
+                    //thread-E: 3
+                    //Node{next=Node{next=Node{next=Node{next=null, thread=Thread[thread-B,5,main], waitStatus=0}, thread=Thread[thread-C,5,main], waitStatus=1}, thread=Thread[thread-D,5,main], waitStatus=1}, thread=null, waitStatus=-1}
+                    //唤醒: thread-D 当前线程：thread-E 1697543788527
+                    //被唤醒：thread-D 1697543788527
+                    //thread-D: 4
+                    //Node{next=Node{next=Node{next=null, thread=Thread[thread-B,5,main], waitStatus=0}, thread=Thread[thread-C,5,main], waitStatus=1}, thread=null, waitStatus=-1}
+                    //唤醒: thread-C 当前线程：thread-D 1697543788527
+                    //被唤醒：thread-C 1697543788527
+                    //thread-C: 5
+                    //Node{next=Node{next=null, thread=Thread[thread-B,5,main], waitStatus=0}, thread=null, waitStatus=-1}
+                    //唤醒: thread-B 当前线程：thread-C 1697543788527
+                    //被唤醒：thread-B 1697543788527
+                    //thread-B: 6
                 if (node.prev == head && tryAcquire()) {
                     // 自己节点变为新的头节点
                     node.thread = null;
@@ -184,6 +207,8 @@ public class MyReentrantLock {
                     // 替换头节点
                     head = node;
                     break;
+                } else if ((n = node.prev) != head) {
+                    System.out.println("我被错误唤醒了兄弟：" + Thread.currentThread().getName() + "\n" + n.hashCode() + "\n" + head.hashCode());
                 }
             }
         }
@@ -193,7 +218,6 @@ public class MyReentrantLock {
      * 解锁
      */
     public void unlock() {
-//        System.out.println(Thread.currentThread() + " " + head);
         // 如果减到0就解锁成功
         if (ownerThread == Thread.currentThread()) {
             //解锁处理
@@ -203,6 +227,9 @@ public class MyReentrantLock {
 
                 // 唤醒next线程继续抢锁
                 if (head != null && head.waitStatus.compareAndSet(1, -1)) {
+                    System.out.println(head);
+                    System.out.println("唤醒: " + head.next.thread.getName() + " 当前线程：" +
+                            Thread.currentThread().getName() + " " + System.currentTimeMillis());
                     // 唤醒线程
                     LockSupport.unpark(head.next.thread);
                 }

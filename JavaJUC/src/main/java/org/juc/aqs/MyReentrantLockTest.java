@@ -1,6 +1,9 @@
 package org.juc.aqs;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 测试MyReentrantLock
@@ -16,64 +19,120 @@ public class MyReentrantLockTest {
         reentrantLock.lock();
         try {
             num += 1;
-//            System.out.println(Thread.currentThread().getName() + ": " + num);
-//            TimeUnit.MILLISECONDS.sleep(10);
+            System.out.println(Thread.currentThread().getName() + ": " + num);
+//            TimeUnit.MILLISECONDS.sleep(30);
         } finally {
             reentrantLock.unlock();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        CountDownLatch countDownLatch = new CountDownLatch(6);
+        CyclicBarrier barrier = new CyclicBarrier(6);
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+            try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-A").start();
 
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+           try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-B").start();
 
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+            try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-C").start();
 
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+            try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-D").start();
 
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+            try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-E").start();
 
         new Thread(()-> {
-            int num = 0;
-            for (int i = 0; i < 10000; i++) {
-                add();
+            try {
+                barrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                throw new RuntimeException(e);
             }
-            countDownLatch.countDown();
+            add();
         }, "thread-F").start();
 
-        countDownLatch.await();
-        System.out.println(num);
+
+//        CountDownLatch countDownLatch = new CountDownLatch(6);
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-A").start();
+//
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-B").start();
+//
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-C").start();
+//
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-D").start();
+//
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-E").start();
+//
+//        new Thread(()-> {
+//            int num = 0;
+//            for (int i = 0; i < 10000; i++) {
+//                add();
+//            }
+//            countDownLatch.countDown();
+//        }, "thread-F").start();
+//
+//        countDownLatch.await();
+//        System.out.println(num);
     }
 }
